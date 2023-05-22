@@ -5,7 +5,7 @@
 
 #### okhttp进行网络请求操作：
 
-是在http://hq.sinajs.cn/list= 新浪财经网进行数据获取的，通过对输入数字的字符来进行判断并填充，上述网址等于后面的内容。
+是在http://hq.sinajs.cn/list= 新浪财经网进行数据获取的。
 首先，创建了一个 OkHttp 客户端对象 client，用于发起 HTTP 请求和接收响应，然后创建了一个 HTTP 请求对象 request，其中加入referer字段，否则会无法访问。接着创建一个 Call 对象，通过 call.enquene() 发起一个异步请求，将请求结果通过回调函数传递到 Callback 接口的实现，当网络请求成功时，OkHttp 会调用onResponse()方法，并将响应结果作为参数传递给该方法进行处理；当网络请求失败时，OkHttp 会调用onFailure()方法，并将响应异常作为参数传递给该方法进行处理。
 
 #### 更新ui界面：
